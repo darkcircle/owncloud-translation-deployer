@@ -11,8 +11,8 @@ Prerequisition
 ==============
 You just should check php has installed into your system
 
-   # whereis php
-   /usr/bin/php
+<pre># whereis php
+/usr/bin/php</pre>
 
 ? yes. and your system should have an ownCloud.
 
@@ -20,18 +20,18 @@ Installation
 ============
 Clone this source into the root of owncloud source tree
 
-   /www/owncloud.foo.baz # git clone git://github.com/darkcircle/owncloud-translation-deployer
+<code>/www/owncloud.foo.baz # git clone git://github.com/darkcircle/owncloud-translation-deployer</code>
   
 Set your favorite locale code. see also directory list of /ownCloudRoot/l10n/
 
-   /www/owncloud.foo.baz # cd owncloud-translation-deployer/OCTransDeployer/config;vi locale.ini
+<code>/www/owncloud.foo.baz # cd owncloud-translation-deployer/OCTransDeployer/config;vi locale.ini</code>
  
 Run
 ===
 just execute like this.
 
-   /www/owncloud.foo.baz/owncloud-translation-deployer # ./run.sh
+<code>/www/owncloud.foo.baz/owncloud-translation-deployer # ./run.sh</code>
 
 and you can optionally use sudo command if you're logged in as a normal user.
 
-   /www/owncloud.foo.baz/owncloud-translation-deployer $ sudo ./run.sh
+<code>/www/owncloud.foo.baz/owncloud-translation-deployer $ sudo ./run.sh</code>
