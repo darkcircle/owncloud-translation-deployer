@@ -1,4 +1,8 @@
 <?php
+
+include_once( "OCTransDeployer/config/include.ini" );
+include_once( "OCTransDeployer/config/locale.ini" );
+
 /*
  * Main.php
  * This is the main script of ownCloud translation deployer.
@@ -12,13 +16,10 @@ class Main
 
 	function __construct( )
 	{
-		include_once( "OCTransDeployer/config/include.ini" );
-		include_once( "OCTransDeployer/config/locale.ini" );
-
 		global $LOCALE;
 
 		// Specify input and output
-		$this->poFilePrefix = dirname(__FILE__)."/../l10n/$LOCALE";
+		$this->poFilePrefix = dirname(__FILE__)."/../l10n/$LOCALE/";
 		$this->coreList = array( "lib", "core", "settings" );
 		$this->appsList = array();
 
@@ -42,6 +43,7 @@ class Main
 
 	public function exec()
 	{
+		global $LOCALE;
 		// core file
 		foreach ( $this->coreList as $core )
 		{
@@ -54,7 +56,7 @@ class Main
 		// apps file
 		foreach ( $this->appsList as $apps )
 		{
-			$file = $poFilePrefix.$apps.".po";
+			$file = $this->poFilePrefix.$apps.".po";
 			$outputFile = dirname(__FILE__)."/../apps/$apps/l10n/$LOCALE.php";
 			$conv = new TransConv( $file, $outputFile );
 			$conv->exec();
