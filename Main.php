@@ -33,7 +33,7 @@ class Main
 			if ( preg_match ( '/^[\\.]+$/', $obj ) )
 				continue;
 	
-			$obj = preg_split ( '/\\./', $obj );
+			$obj = preg_split ( '/\\./', $obj )[0];
 	
 			if ( !in_array ( $obj, $this->coreList ) )
 				array_push ( $this->appsList, $obj );
