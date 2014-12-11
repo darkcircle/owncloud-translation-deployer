@@ -1,11 +1,11 @@
 <?php
 /*
- * Main.php
+ * TransConv.php
  * main code which converts from gnu gettext po file to php script
  * consists associative array and a single variable.
  * Seong-ho Cho <shcho@gnome.org>, 2014.
  */
-class Main
+class TransConv
 {
 	private $fileQueue;
 	private $iFileHandler;
