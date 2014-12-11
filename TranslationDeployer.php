@@ -16,7 +16,7 @@
 	$dh = opendir ( $po_file_prefix );
 	while ( $obj = readdir ( $dh ) )
 	{
-		if ( preg_match ( '^/[\\.]+$/', $obj ) )
+		if ( preg_match ( '/^[\\.]+$/', $obj ) )
 			continue;
 
 		$obj = preg_split ( '/\\./', $obj );
