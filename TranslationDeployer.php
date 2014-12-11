@@ -19,7 +19,7 @@
 		if ( preg_match ( '/^[\\.]+$/', $obj ) )
 			continue;
 
-		$obj = preg_split ( '/\\./', $obj );
+		$obj = preg_split ( '/\\./', $obj )[0];
 
 		if ( !in_array ( $obj, $core_list ) )
 			array_push ( $apps_list, $obj );
